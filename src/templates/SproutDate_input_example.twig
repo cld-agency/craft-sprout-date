@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Craft Sprout Date plugin for Craft CMS 3.x
+ *
+ * SproutDate Field Input
+ *
+ * @author    James Smith
+ * @copyright Copyright (c) 2018 James Smith
+ * @link      https://cld.agency
+ * @package   CraftSproutDate
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+        instructions: '(Date picker will be triggered on click)',
+        id: name,
+        name: name,
+        value: '',
+        readonly: true,
+        disabled: true
+    })
+}}

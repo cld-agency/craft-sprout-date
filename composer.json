@@ -1,0 +1,41 @@
+{
+    "name": "cld/craft-sprout-date",
+    "description": "Uses flatpickr.js to create a date field for Sprout Forms. Requires Sprout Forms.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft sprout date"
+    ],
+    "support": {
+        "docs": "https://github.com/cld-agency/craft-sprout-date/blob/master/README.md",
+        "issues": "https://github.com/cld-agency/craft-sprout-date/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Smith",
+            "homepage": "https://cld.agency"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "barrelstrength/sprout-forms": "^3.0.0-beta.11"
+    },
+    "autoload": {
+        "psr-4": {
+          "cld\\craftsproutdate\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Date Field for Sprout Forms",
+        "handle": "craft-sprout-date",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/cld-agency/craft-sprout-date/master/CHANGELOG.md",
+        "class": "cld\\craftsproutdate\\CraftSproutDate"
+    }
+}

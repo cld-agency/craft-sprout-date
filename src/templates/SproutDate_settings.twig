@@ -1,0 +1,27 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Craft Sprout Date plugin for Craft CMS
+ *
+ * SproutDate Field Settings
+ *
+ * @author    James Smith
+ * @copyright Copyright (c) 2018 James Smith
+ * @link      https://cld.agency
+ * @package   CraftSproutDate
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{# {% do view.registerAssetBundle("cld\\craftsproutdate\\assetbundles\\craftsproutdate\\CraftSproutDateAsset") %} #}
+
+{{ forms.textField({
+	    label: 'Some Attribute',
+	    instructions: 'Enter some attribute here.',
+	    id: 'someAttribute',
+	    name: 'someAttribute',
+	    value: field['someAttribute']
+	})
+}}
