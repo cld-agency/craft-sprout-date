@@ -30,6 +30,10 @@ use cld\craftsproutdate\fields\SproutDate;
 class CraftSproutDate extends Plugin
 {
 	public static $plugin;
+
+	// don't touch this unless you need to run actions on the database, as it
+	// will cause the site to go down until someone presses the "Finish Up"
+	// button on the Craft CP!!!
 	public $schemaVersion = '1.0.1';
 
 	// =========================================================================
