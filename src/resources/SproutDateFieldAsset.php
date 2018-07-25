@@ -21,16 +21,9 @@ use craft\web\assets\cp\CpAsset;
  */
 class SproutDateFieldAsset extends AssetBundle
 {
-    // Public Methods
-    // =========================================================================
-
-    /**
-     * @inheritdoc
-     */
     public function init()
     {
         $this->sourcePath = "@cld/craftsproutdate/resources";
-        $this->depends = [CpAsset::class];
         $this->js = ['flatpickr.js'];
         $this->css = ['flatpickr.css'];
         parent::init();

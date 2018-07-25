@@ -30,7 +30,7 @@ use cld\craftsproutdate\fields\SproutDate;
 class CraftSproutDate extends Plugin
 {
 	public static $plugin;
-	public $schemaVersion = '1.0.0';
+	public $schemaVersion = '1.0.1';
 
 	// =========================================================================
 
