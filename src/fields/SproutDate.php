@@ -16,6 +16,7 @@ use craft\base\PreviewableFieldInterface;
 
 use barrelstrength\sproutforms\base\FormField;
 use Twig\Markup;
+use craft\helpers\Template as TemplateHelper;
 use cld\craftsproutdate\resources\SproutDateFieldAsset;
 
 /**
@@ -106,7 +107,7 @@ class SproutDate extends FormField implements PreviewableFieldInterface
 		$namespacedId = Craft::$app->getView()->namespaceInputId($id);
 
 		// Render the input template
-		return Craft::$app->getView()->renderTemplate(
+		$rendered = Craft::$app->getView()->renderTemplate(
 			'SproutDate_input',
 			[
 				'name' => $this->handle,
@@ -118,6 +119,8 @@ class SproutDate extends FormField implements PreviewableFieldInterface
 				'renderingOptions' => $renderingOptions
 			]
 		);
+
+		return TemplateHelper::raw($rendered);
 	}
 
 	public function getTemplatesPath(): string
