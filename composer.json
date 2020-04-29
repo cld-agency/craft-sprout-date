@@ -2,7 +2,7 @@
     "name": "cld/craft-sprout-date",
     "description": "Uses flatpickr.js to create a date field for Sprout Forms. Requires Sprout Forms.",
     "type": "craft-plugin",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "keywords": [
         "craft",
         "cms",

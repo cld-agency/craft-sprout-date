@@ -68,7 +68,7 @@ class SproutDate extends FormField implements PreviewableFieldInterface
 	// This is for Craft's native fields, don't think it applies to Sprout fields...
 	public function getInputHtml($value, ElementInterface $element = null): string
 	{
-
+		return '';
 	}
 
 	/**
