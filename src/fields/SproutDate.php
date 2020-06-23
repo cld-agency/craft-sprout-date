@@ -15,6 +15,7 @@ use craft\base\ElementInterface;
 use craft\base\PreviewableFieldInterface;
 
 use barrelstrength\sproutforms\base\FormField;
+use barrelstrength\sproutforms\elements\Entry;
 use Twig\Markup;
 use craft\helpers\Template as TemplateHelper;
 use cld\craftsproutdate\resources\SproutDateFieldAsset;
@@ -96,7 +97,7 @@ class SproutDate extends FormField implements PreviewableFieldInterface
 	 * @throws \Twig_Error_Loader
 	 * @throws \yii\base\Exception
 	 */
-	public function getFrontEndInputHtml($value, array $renderingOptions = null): Markup
+	public function getFrontEndInputHtml($value, Entry $entry, array $renderingOptions = null): Markup
 	{
 		// Register our asset bundle
 		Craft::$app->getView()->registerAssetBundle(SproutDateFieldAsset::class);
@@ -114,6 +115,7 @@ class SproutDate extends FormField implements PreviewableFieldInterface
 				'title' => $this->handle,
 				'value' => $value,
 				'field' => $this,
+				'entry' => $entry,
 				'id' => $id,
 				'namespacedId' => $namespacedId,
 				'renderingOptions' => $renderingOptions
